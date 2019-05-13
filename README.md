@@ -1,0 +1,2 @@
+# snakeGameApp
+using adobe phonegap
