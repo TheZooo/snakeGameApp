@@ -22,7 +22,7 @@
         var snakeSize = gridSize / 2;
         var snakeBodyAmt = 1;
         var snakeBodyX = [1];
-        var snakeBodyY = [1];
+        var snakeBodyY = [0];
         var trailX = [];
         var trailY = [];
         var moveInt = setInterval(snakeInterval, 100);
@@ -36,9 +36,11 @@
         var points = 0;
         var eats = new eats();
         var snake = new snake();
+        
         function setup() {
             createCanvas(w, h);
         }
+        
         function draw() {
             background(220);
             for (i; i < h - 1; i += gridSize) { //setup position of grid
@@ -239,8 +241,8 @@
         }
         #points {
             position: absolute;
-            left: 20px;
-            top: 20px;
+            left: 22vw;
+            top: 2vh;
             color: rgba(0,0,0,0.5);
             user-select: none;
             visibility: hidden;
