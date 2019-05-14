@@ -22,7 +22,7 @@
         var snakeSize = gridSize / 2;
         var snakeBodyAmt = 1;
         var snakeBodyX = [1];
-        var snakeBodyY = [1];
+        var snakeBodyY = [0];
         var trailX = [];
         var trailY = [];
         var moveInt = setInterval(snakeInterval, 100);
@@ -86,18 +86,16 @@
             
             document.getElementById('points').style.left = w + 25;
             document.getElementById('points').innerHTML = "Points: " + points;
+            document.getElementById('dump').innerHTML = "X: " + mouseX + " Y: " + mouseY;
         }
-
         function start() {
             actSwitch = true;
             document.getElementById("startTitle").style.visibility = "hidden";
             document.getElementById("startBttn").style.visibility = "hidden";
         }
-
         function restart() {
             location.href = "gridSnake.html";
         }
-
         function snake() {
             this.move = function () {
                 this.x = arrX[snakeX] + magicalCenterer;
@@ -235,7 +233,8 @@
     </style>
 </head>
 
-<body onkeydown="exitFuncD(event)" onkeyup="exitFuncU(event)">
+<body>
+    <p id="dump"></p>
     <h1 id="points"></h1>
     <h1 class="title" id="startTitle">Grid Snake</h1>
     <button class="bttnS" onclick="start()" id="startBttn">Start Game</button>
