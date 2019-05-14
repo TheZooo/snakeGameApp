@@ -101,18 +101,18 @@
                 this.x = arrX[snakeX] + magicalCenterer;
                 this.y = arrY[snakeY] + magicalCenterer;
                 if (snakeX >= 0 || snakeX <= cellCountX) {
-                    if (keyIsDown(65) && snakeDirection !== 2) { //left
+                    if (mouseX <= 200 && snakeDirection !== 2) { //left
                         snakeDirection = 0;
                     }
-                    if (keyIsDown(68) && snakeDirection !== 0) { //right
+                    if (mouseX >= 550 && snakeDirection !== 0) { //right
                         snakeDirection = 2;
                     }
                 }
                 if (snakeY >= 0 && snakeY <= cellCountY) {
-                    if (keyIsDown(87) && snakeDirection !== 3) { //up
+                    if (mouseY <= 200 && snakeDirection !== 3) { //up
                         snakeDirection = 1;
                     }
-                    if (keyIsDown(83) && snakeDirection !== 1) { //down
+                    if (mouseY >= 520 && snakeDirection !== 1) { //down
                         snakeDirection = 3;
                     }
                 }
@@ -208,7 +208,7 @@
         }
         #points {
             position: absolute;
-            left: 14vw;
+            left: 11vw;
             top: 2vh;
             color: rgba(0,0,0,0.5);
             user-select: none;
