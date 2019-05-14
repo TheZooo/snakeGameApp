@@ -86,7 +86,6 @@
             
             document.getElementById('points').style.left = w + 25;
             document.getElementById('points').innerHTML = "Points: " + points;
-            document.getElementById('dump').innerHTML = "X: " + mouseX + " Y: " + mouseY;
         }
         function start() {
             actSwitch = true;
@@ -234,7 +233,7 @@
 </head>
 
 <body>
-    <p id="dump"></p>
+    <p id="dump">Move by tapping the top, bottom, left, or right of the play box</p>
     <h1 id="points"></h1>
     <h1 class="title" id="startTitle">Grid Snake</h1>
     <button class="bttnS" onclick="start()" id="startBttn">Start Game</button>
